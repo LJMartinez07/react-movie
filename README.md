@@ -7,13 +7,13 @@ This repository contains a web application made with React. It allows user to kn
     - [ ] List popular movies
   </li>
   <li>
-Search movies by title
+ - [ ] Search movies by title
   </li>
   <li>
-  Auto-suggest movie title for search function
+  - [ ] Auto-suggest movie title for search function
   </li>
     <li>
-  View detail movie info including poster, casts, trailers
+  - [ ] View detail movie info including poster, casts, trailers
   </li>
 </ul>
 
