@@ -9,8 +9,8 @@ const Header: FC = () => {
             <Navbar.Group align={Alignment.LEFT}>
                 <Navbar.Heading >React Movies</Navbar.Heading>
                 <Navbar.Divider className="customize-bar-divider" />
-                <Button className="bp3-button bp3-minimal bp3-icon-home ">Home</Button>
-                <Button className="bp3-button bp3-minimal bp3-icon-document ">Files</Button>
+                <Button className="bp3-button bp3-minimal bp3-icon-film">Movies</Button>
+                <Button className="bp3-button bp3-minimal bp3-icon-video">TV Shows</Button>
             </Navbar.Group>
         </Navbar>
     );
