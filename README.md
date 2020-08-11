@@ -7,7 +7,6 @@ This repository contains a web application made with React. It allows user to kn
     List popular movies
   </li>
   <li>
-    
 Search movies by title
   </li>
   <li>
