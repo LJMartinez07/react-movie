@@ -8,6 +8,7 @@ const Header: FC = () => {
         <Navbar className="bp3-violet1">
             <Navbar.Group align={Alignment.LEFT}>
                 <Navbar.Heading >React Movies</Navbar.Heading>
+                <input className="bp3-input" placeholder="Search your favorite Movie/Tv Show" type="text" />
                 <Navbar.Divider className="customize-bar-divider" />
                 <Button className="bp3-button bp3-minimal bp3-icon-film">Movies</Button>
                 <Button className="bp3-button bp3-minimal bp3-icon-video">TV Shows</Button>
