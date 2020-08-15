@@ -1,6 +1,6 @@
 # React Movie
 This repository contains a web application made with React and TypeScript. It allows user to know the best movies in the whole world.
-#### [See it Live](https://luismartinez28.github.io/react-movie/)
+#### [See it Live](https://LJMartinez07.github.io/react-movie/)
 # Features
    - [ ] List popular movies
    - [ ] Search movies by title
