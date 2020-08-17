@@ -8,3 +8,30 @@
 .bp3-button[class*="bp3-icon-"]::before {
     color: #fff !important;
 }
+input[type="search"] {
+    background: #422042;
+    width: 178px;
+    border-radius: 5px  !important;
+    color: #fff;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+    &::placeholder{
+        color: #cfd0d1;
+    }
+    &:focus{
+        width: 300px;
+        color: #000;
+        background: #fafbfc;
+    }
+    &:focus::placeholder{
+        color: #636464;
+        // color: #;
+    }
+    
+}
+// input[type="search"]:focus {
+  
+ 
+    
+// }  
