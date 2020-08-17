@@ -20,6 +20,7 @@ input[type="search"] {
         color: #cfd0d1;
     }
     &:focus{
+        box-shadow: unset !important;
         width: 300px;
         color: #000;
         background: #fafbfc;
