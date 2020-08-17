@@ -11,6 +11,7 @@ export default () => {
                 height: '100vh',
             }}
         >
+            
             <div>
                 <div style={{maxWidth:600+'px', margin: '0px auto' }}>
                     <h1>React Movies</h1>
