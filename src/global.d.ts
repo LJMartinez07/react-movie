@@ -4,3 +4,4 @@ declare global{
         beforeEnter?: (path:string) => void
     }
 }
+export { };
