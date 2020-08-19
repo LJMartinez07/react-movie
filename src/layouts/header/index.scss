@@ -1,12 +1,14 @@
 .bp3-navbar-heading{
     color: #fff;
 }
-
 .bp3-button-text{
     color: #fff;
+    
 }
-.bp3-button[class*="bp3-icon-"]::before {
-    color: #fff !important;
+.bp3-button {
+    .bp3-icon{
+        color: #fff !important;
+    }
 }
 input[type="search"] {
     background: #422042;
@@ -31,7 +33,14 @@ input[type="search"] {
     }
     
 }
-// input[type="search"]:focus {
+a{
+    color: inherit !important;
+    &:hover{
+        text-decoration: inherit !important; 
+        color: inherit !important
+    }
+}
+
   
  
     

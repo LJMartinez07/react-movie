@@ -1,5 +1,7 @@
 import React from 'react';
 import Main from '../../layouts/main';
+import MovieService from '../../http/service/MovieService'
+const service = new MovieService();
 export default () => {
     return (
         <Main>
