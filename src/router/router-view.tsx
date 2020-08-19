@@ -12,7 +12,7 @@ function CustomRoute(props: iRouterViewProps) {
   // if can match
   let matchRoute: any = routerMap.find(item => {
     let url = item.path;
-    // /detail/:id -> \\/detail\\/[^/+]
+    // /movies/:id -> \\/movies\\/[^/+]
     url = url.replace(/(:.+)/g, "[^/]+").replace(/\//g, "\\/");
 
     return new RegExp(`${url}(\\/|\\/)?$`, 'gi').test(path);
