@@ -3,5 +3,9 @@ declare global{
         location?: any;
         beforeEnter?: (path:string) => void
     }
+
+    interface iMovieCardProps{
+        movie?: Object
+    }
 }
 export { };
