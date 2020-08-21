@@ -6,18 +6,19 @@ declare global{
 
     interface iMovieList{
         adult: boolean;
-        overview: string;
-        release_date: string;
+        backdrop_path: string;
         genre_ids: number[];
         id: number;
-        original_title: string;
         original_language: string;
-        title: string;
-        backdrop_path: string;
+        original_title: string;
+        overview: string;
         popularity: number;
-        vote_count: number;
+        poster_path: String;
+        release_date: string;
+        title: string;
         video: boolean;
         vote_average: number;
+        vote_count: number;
     }
 }
 export { };

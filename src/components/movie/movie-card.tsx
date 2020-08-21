@@ -15,6 +15,9 @@ export const MovieCard: React.FC<Props> = (props) => {
             <div>
                 <h3>{movie.title}</h3>
             </div>
+            <div>
+                { movie.genre_ids }
+            </div>
         </Card>
     );
 };
