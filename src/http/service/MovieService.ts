@@ -4,7 +4,7 @@ export default class MovieService{
     async getPopularMovies(){
         try{
             const movies =  await http.get("/movie/popular")
-            console.log(movies)
+            return movies.data
         }catch(e){
             console.log(e)
         }
