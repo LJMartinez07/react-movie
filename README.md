@@ -19,7 +19,7 @@ This repository contains a web application made with React and TypeScript. It al
 | [Redux](https://github.com/reduxjs/redux) | Redux is a predictable state container for JavaScript apps. (Not to be confused with a WordPress framework – Redux Framework.). |
 | [ESLint](https://github.com/eslint/eslint) | ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs.  |
 | [Blueprint](https://github.com/palantir/blueprint) | Blueprint is a React-based UI toolkit for the web. |
-| [React Hooks] | Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class. |
+| React Hooks | Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class. |
 
 
 
