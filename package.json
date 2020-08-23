@@ -25,6 +25,7 @@
         "react-responsive": "^8.1.0",
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.1",
+        "swiper": "^6.1.2",
         "typescript": "^3.9.7"
     },
     "scripts": {
