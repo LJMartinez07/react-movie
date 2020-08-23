@@ -21,14 +21,12 @@ function CustomRoute(props: iRouterViewProps) {
   return <Redirect to='/404' />
 }
 
-export default function (props: iRouterViewProps) {
+export const RouterView: React.FC<iRouterViewProps> = props => {
   return (
     <BrowserRouter>
-      <>
         <Switch>
           <CustomRoute {...props} />
         </Switch>
-      </>
     </BrowserRouter>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import RouterView from './router/router-view';
+import {RouterView} from './router/router-view';
 
 function App() {
     return (

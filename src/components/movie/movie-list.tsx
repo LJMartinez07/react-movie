@@ -1,7 +1,10 @@
 import  React from "react";
 import {MovieCard} from "../movie/movieCard/movie-card";
 
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+// Import Swiper styles
+import 'swiper/swiper.scss';
 interface MovieProps  {
     movieList: iMovieList[]
 }
@@ -10,9 +13,9 @@ interface MovieProps  {
 
 export const MovieListComponent: React.FC<MovieProps> = props => {
     const movieList = props.movieList.map((movie, index) =>
-        <div key={index}>
+        <SwiperSlide key={index}>
             <MovieCard  movie={movie}/>
-        </div>
+        </SwiperSlide>
     );
      const wrapper  = {
         display: "flex",
@@ -21,8 +24,13 @@ export const MovieListComponent: React.FC<MovieProps> = props => {
         flexWrap: "wrap",
     } as React.CSSProperties;
     return (
-        <div >
-            {movieList}
-        </div>
+        <Swiper
+        spaceBetween={50}
+        slidesPerView={3}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+       {movieList}
+      </Swiper>
     );
 }
