@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import routerMap from "./config";
 function CustomRoute(props: iRouterViewProps) {
-  let path:string = props.location.pathname;
+  let path: string = props.location.pathname;
   props.beforeEnter && props.beforeEnter(path);
   // '/'-> '/home
   if (path === '/') return <Redirect to='/home' />
@@ -24,9 +24,9 @@ function CustomRoute(props: iRouterViewProps) {
 export const RouterView: React.FC<iRouterViewProps> = props => {
   return (
     <BrowserRouter>
-        <Switch>
-          <CustomRoute {...props} />
-        </Switch>
+      <Switch>
+        <CustomRoute {...props} />
+      </Switch>
     </BrowserRouter>
   );
 }

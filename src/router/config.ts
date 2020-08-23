@@ -9,10 +9,10 @@ export default [
   },
   {
     path: '/movies',
-    component: Movies,  
+    component: Movies,
   },
   {
     path: '/404',
-    component: NotFound,  
+    component: NotFound,
   }
 ];
