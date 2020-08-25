@@ -11,7 +11,8 @@ export const MovieCard: React.FC<Props> = (props) => {
         <Card elevation={Elevation.FOUR}>
             <div className={styles.card_body}>
                 <div className={styles.image}>
-                    <img src={'https://image.tmdb.org/t/p/w500/' + movie.backdrop_path} alt="" />
+                    <img src={'https://image.tmdb.org/t/p/w220_and_h330_face' + movie.poster_path} alt="" />
+
                 </div>
                 <div className={styles.title} >
                     <h3>{movie.title}</h3>
