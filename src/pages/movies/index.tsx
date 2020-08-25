@@ -13,7 +13,7 @@ export default () => {
 
     return (
         <Main>
-            <h1>Movies</h1>
+            {/* <h1>Movies</h1> */}
             <MovieListComponent movieList={movies} />
         </Main>
     );

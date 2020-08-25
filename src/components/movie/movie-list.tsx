@@ -24,12 +24,10 @@ export const MovieListComponent: React.FC<MovieProps> = props => {
         flexWrap: "wrap",
     } as React.CSSProperties;
     return (
-        <Swiper spaceBetween={50} slidesPerView={3} virtual>
+        <div style={wrapper}>
             {movieList.map((movie, index) => (
-                <SwiperSlide key={index}>
-                    <MovieCard movie={movie} ></MovieCard>
-                </SwiperSlide>
+                <MovieCard movie={movie} />
             ))}
-        </Swiper>
+        </div>
     );
 }

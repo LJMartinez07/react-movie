@@ -2,6 +2,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .image{
+      border-radius: 20px;
+    width: 100%;
+    min-height: calc(150px * 1.5);
+    height: calc(150px * 1.5);
+    background: #dbdbdb;
+    overflow: hidden;
+    }
+
     .title {
       flex-wrap: wrap;
       display: flex;
