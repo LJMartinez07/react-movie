@@ -8,10 +8,18 @@ interface Props {
 export const MovieCard: React.FC<Props> = (props) => {
     const { movie } = props
     return (
-        <Card elevation={Elevation.FOUR}>
+        <Card style={{
+            marginLeft: '30px',
+            width: '200px',
+            minWidth: '200px;'
+        }} elevation={Elevation.FOUR}>
             <div className={styles.card_body}>
                 <div className={styles.image}>
-                    <img src={'https://image.tmdb.org/t/p/w220_and_h330_face' + movie.poster_path} alt="" />
+                    <div className="wrapper">
+                        <a className={styles.image} href="#">
+                            <img src={'https://image.tmdb.org/t/p/w220_and_h330_face' + movie.poster_path} alt="" />
+                        </a>
+                    </div>
 
                 </div>
                 <div className={styles.title} >

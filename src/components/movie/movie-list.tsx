@@ -21,7 +21,8 @@ export const MovieListComponent: React.FC<MovieProps> = props => {
         display: "flex",
         justifyContent: "space-between",
         flexDirection: "row",
-        flexWrap: "wrap",
+        overflow: "auto"
+        // flexWrap: "wrap",
     } as React.CSSProperties;
     return (
         <div style={wrapper}>
