@@ -1,10 +1,21 @@
-import React, { FC } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import { Navbar, Alignment, Button } from '@blueprintjs/core';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 import './index.scss';
 
+import MovieService from '../../http/service/MovieService'
+const service = new MovieService();
 const Header: FC = () => {
+
+    const [query, setQuery] = useState('')
+    useEffect(() => {
+        service.getKeywords(query)
+    }, [query])
+    function handleClick(event: any) {
+
+        setQuery(event.target.value)
+    }
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
     return (
         <Navbar className="bp3-violet1">
@@ -13,7 +24,11 @@ const Header: FC = () => {
                     <Link to="/">React Movies</Link>
                 </Navbar.Heading>
                 {!isTabletOrMobile && (
-                    <input className="bp3-input" placeholder="Search your favorite Movie/Tv Show" type="search" />
+                    <input className="bp3-input"
+                        value={query}
+                        onChange={handleClick}
+                        placeholder="Search your favorite Movie/Tv Show"
+                        type="search" />
                 )}
                 <Navbar.Divider className="customize-bar-divider" />
                 <Link to="/movies">

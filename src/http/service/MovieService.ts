@@ -9,10 +9,14 @@ export default class MovieService {
             console.log(e)
         }
     }
-    async getLatestMovies() {
+    async getKeywords(query: string) {
         try {
-            const movies = await http.get("/movie/latest")
-            console.log(movies)
+            const keyword = await http.get("/search/keyword", {
+                params: {
+                    query
+                }
+            })
+            console.log(keyword)
         } catch (e) {
             console.log(e)
         }
