@@ -1,18 +1,21 @@
 import React from 'react';
 import { Card, Elevation } from '@blueprintjs/core';
-import styles from './movie-card.module.scss'
+import styles from './movie-card.module.scss';
 interface Props {
     movie: iMovieList;
 }
 
 export const MovieCard: React.FC<Props> = (props) => {
-    const { movie } = props
+    const { movie } = props;
     return (
-        <Card style={{
-            marginLeft: '30px',
-            width: '200px',
-            minWidth: '200px;'
-        }} elevation={Elevation.FOUR}>
+        <Card
+            style={{
+                marginLeft: '30px',
+                width: '200px',
+                minWidth: '200px;',
+            }}
+            elevation={Elevation.FOUR}
+        >
             <div className={styles.card_body}>
                 <div className={styles.image}>
                     <div className="wrapper">
@@ -20,13 +23,11 @@ export const MovieCard: React.FC<Props> = (props) => {
                             <img src={'https://image.tmdb.org/t/p/w220_and_h330_face' + movie.poster_path} alt="" />
                         </a>
                     </div>
-
                 </div>
-                <div className={styles.title} >
+                <div className={styles.title}>
                     <h3>{movie.title}</h3>
                 </div>
             </div>
-
         </Card>
     );
 };
