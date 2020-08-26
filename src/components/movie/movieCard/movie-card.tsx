@@ -16,7 +16,7 @@ export const MovieCard: React.FC<Props> = (props) => {
             <div className={styles.card_body}>
                 <div className={styles.image}>
                     <div className="wrapper">
-                        <a className={styles.image} href="#">
+                        <a className={styles.image} href="/movie">
                             <img src={'https://image.tmdb.org/t/p/w220_and_h330_face' + movie.poster_path} alt="" />
                         </a>
                     </div>

@@ -1,21 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { MovieCard } from "../movie/movieCard/movie-card";
-import SwiperCore, { Virtual } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/swiper.scss';
-// install Virtual module
-// SwiperCore.use([Virtual]);
-
+import MovieService from '../../http/service/MovieService';
 interface MovieProps {
-    movieList: iMovieList[]
+    KIND: string
 }
-SwiperCore.use([Virtual])
-
-
+const service = new MovieService();
 export const MovieListComponent: React.FC<MovieProps> = props => {
-    const movieList = props.movieList;
+    const [movies, setMovies] = useState([]);
+    const [kind] = useState(props.KIND)
+    useEffect(() => {
+        service.getMovies(kind).then((res) => {
+            setMovies(res.results);
+        });
+    }, [kind]);
+
     // eslint-disable-next-line
     const wrapper = {
         display: "flex",
@@ -26,7 +25,7 @@ export const MovieListComponent: React.FC<MovieProps> = props => {
     } as React.CSSProperties;
     return (
         <div style={wrapper}>
-            {movieList.map((movie, index) => (
+            {movies.map((movie, index) => (
                 <MovieCard movie={movie} />
             ))}
         </div>

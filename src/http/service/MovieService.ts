@@ -1,19 +1,19 @@
 import http from '../http-client'
 
-export default class MovieService{
-    async getPopularMovies(){
-        try{
-            const movies =  await http.get("/movie/popular")
+export default class MovieService {
+    async getMovies(type: string) {
+        try {
+            const movies = await http.get(`/movie/${type}`)
             return movies.data
-        }catch(e){
+        } catch (e) {
             console.log(e)
         }
     }
-    async getLatestMovies(){
-        try{
-            const movies =  await http.get("/movie/latest")
+    async getLatestMovies() {
+        try {
+            const movies = await http.get("/movie/latest")
             console.log(movies)
-        }catch(e){
+        } catch (e) {
             console.log(e)
         }
     }

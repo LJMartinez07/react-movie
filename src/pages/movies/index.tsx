@@ -1,20 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Main from '../../layouts/main';
-import MovieService from '../../http/service/MovieService';
-import { MovieListComponent } from '../../components/movie/movie-list';
-const service = new MovieService();
+import { MovieListComponent } from '../../components/movie/movie-list'
 export default () => {
-    const [movies, setMovies] = useState([]);
-    useEffect(() => {
-        service.getPopularMovies().then((res) => {
-            setMovies(res.results);
-        });
-    }, []);
-
+    const MOVIE_LIST = {
+        POPULAR: 'popular',
+        LATEST: 'top_rated'
+    }
     return (
         <Main>
-            <h1>Popular movies</h1>
-            <MovieListComponent movieList={movies} />
+            <h1>Popular Movies</h1>
+            <MovieListComponent KIND={MOVIE_LIST.POPULAR} />
+            <h1>Top Rated</h1>
+            <MovieListComponent KIND={MOVIE_LIST.LATEST} />
         </Main>
     );
 };
