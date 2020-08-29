@@ -1,6 +1,7 @@
 import React, { FC, useState, useEffect } from 'react';
 import styles from './input-search.module.scss';
 import MovieService from '../../../../http/service/MovieService';
+import { KeyWordsComponent } from '../keyWords/key-word';
 export const InputSearchComponent: FC = () => {
     const service = new MovieService();
     const [query, setQuery] = useState('');
@@ -19,6 +20,7 @@ export const InputSearchComponent: FC = () => {
                 placeholder="Search your favorite Movie/Tv Show"
                 type="search"
             />
+            <KeyWordsComponent />
         </div>
     );
 };

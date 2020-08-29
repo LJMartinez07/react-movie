@@ -1,3 +1,27 @@
 .input_search {
     position: relative;
 }
+input[type="search"] {
+    background: #422042;
+    width: 178px;
+    border-radius: 5px  !important;
+    color: #fff;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+    &::placeholder{
+        color: #cfd0d1;
+    }
+    &:focus{
+        border-radius: 5px 5px 0 0 !important;
+        box-shadow: unset !important;
+        width: 500px;
+        color: #000;
+        background: #fafbfc;
+    }
+    &:focus::placeholder{
+        color: #636464;
+        // color: #;
+    }
+    
+}
