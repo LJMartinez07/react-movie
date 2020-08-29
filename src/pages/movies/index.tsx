@@ -2,16 +2,16 @@ import React from 'react';
 import Main from '../../layouts/main';
 import { MovieListComponent } from '../../components/movie/movie-list'
 export default () => {
-    const MOVIE_LIST = {
+    const MOVIE_LIST_TYPE = {
         POPULAR: 'popular',
         LATEST: 'top_rated'
     }
     return (
         <Main>
             <h1>Popular Movies</h1>
-            <MovieListComponent KIND={MOVIE_LIST.POPULAR} />
+            <MovieListComponent type={MOVIE_LIST_TYPE.POPULAR} />
             <h1>Top Rated</h1>
-            <MovieListComponent KIND={MOVIE_LIST.LATEST} />
+            <MovieListComponent type={MOVIE_LIST_TYPE.LATEST} />
         </Main>
     );
 };

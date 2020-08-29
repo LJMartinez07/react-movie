@@ -1,10 +1,10 @@
-declare global{
-    interface iRouterViewProps{
+declare global {
+    interface iRouterViewProps {
         location?: any;
-        beforeEnter?: (path:string) => void
+        beforeEnter?: (path: string) => void
     }
 
-    interface iMovieList{
+    interface iMovieList {
         adult: boolean;
         backdrop_path: string;
         genre_ids: number[];
@@ -20,5 +20,7 @@ declare global{
         vote_average: number;
         vote_count: number;
     }
+
+
 }
 export { };
