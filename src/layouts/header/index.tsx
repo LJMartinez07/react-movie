@@ -20,7 +20,7 @@ const Header: FC = () => {
                         Movies
                     </Button>
                 </Link>
-                <Link to="/">
+                <Link to="/tv">
                     <Button className="bp3-minimal" icon="video">
                         TV Shows
                     </Button>
