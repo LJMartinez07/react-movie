@@ -3,7 +3,7 @@ export enum ResourceEndpoint {
     MOVIES = 'movie',
 }
 
-export enum PosterSizes {
+export enum ImageSizes {
     SMALL = "w185",
     MEDIUM = "w342",
     LARGE = "w780",
