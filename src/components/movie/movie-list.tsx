@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { MovieCard } from "../movie/movieCard/movie-card";
+import React, { useState, useEffect } from 'react';
+import { MovieCard } from '../movie/movieCard/movie-card';
 import MovieService from '../../http/service/MovieService';
-import { ResourceEndpoint } from '../../http/service/tmovieOptions'
+import { ResourceEndpoint } from '../../http/service/tmovieOptions';
 interface MovieProps {
-    type: string
+    type: string;
 }
 const service = new MovieService();
-export const MovieListComponent: React.FC<MovieProps> = props => {
+export const MovieListComponent: React.FC<MovieProps> = (props) => {
     const [movies, setMovies] = useState([]);
-    const [type] = useState(props.type)
+    const [type] = useState(props.type);
     useEffect(() => {
         service.getList(ResourceEndpoint.MOVIES, type).then((res) => {
             setMovies(res.results);
@@ -16,10 +16,10 @@ export const MovieListComponent: React.FC<MovieProps> = props => {
     }, [type]);
     // eslint-disable-next-line
     const wrapper_list = {
-        display: "flex",
-        justifyContent: "space-between",
-        flexDirection: "row",
-        overflow: "auto"
+        display: 'flex',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        overflow: 'auto',
         // flexWrap: "wrap",
     } as React.CSSProperties;
     return (
@@ -29,4 +29,4 @@ export const MovieListComponent: React.FC<MovieProps> = props => {
             ))}
         </div>
     );
-}
+};
