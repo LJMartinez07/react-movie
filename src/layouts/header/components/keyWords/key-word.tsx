@@ -13,7 +13,9 @@ export const KeyWordsComponent: FC<KeyWordsProps> = (props) => {
         <div className={styles.key_word}>
             <ul className={styles.list_suggestions}>
                 {props.suggestions.map((suggestion) => (
-                    <li className={styles.list_item}>{suggestion.name}</li>
+                    <li key={suggestion.name} className={styles.list_item}>
+                        {suggestion.name}
+                    </li>
                 ))}
             </ul>
         </div>

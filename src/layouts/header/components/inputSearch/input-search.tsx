@@ -16,16 +16,18 @@ interface res {
 export const InputSearchComponent: FC = () => {
     const service = new MovieService();
     const [query, setQuery] = useState('');
-    const [suggestions, setSuggestions] = useState<res.results[] | []>([]);
-    useEffect(() => {
-        service.getKeywords(query).then((res) => {
-            setSuggestions(res);
-        });
+    const [suggestions, setSuggestions] = useState([]);
+    // useEffect(() => {
 
-        // setSuggestions(service.getKeywords(query));
-    }, [query, service, suggestions]);
+    //     // setSuggestions(service.getKeywords(query));
+    // }, [query]);
     function handleClick(event: any) {
         setQuery(event.target.value);
+        if (event.target.value)
+            service.getKeywords(event.target.value).then((res) => {
+                // console.log(res);
+                setSuggestions(res.results);
+            });
     }
     return (
         <div className={styles.input_search}>
