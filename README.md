@@ -2,9 +2,10 @@
 This repository contains a web application made with React and TypeScript. It allows user to know the best movies in the whole world.
 #### [See it Live](https://LJMartinez07.github.io/react-movie/)
 # Features
-   - [ ] List popular movies
+   - [x] List popular movies
+   - [ ] List popular tv shows
    - [ ] Search movies by title
-   - [ ] Auto-suggest movie title for search function
+   - [x] Auto-suggest movie title for search function
    - [ ] View detail movie info including poster, casts, trailers
 
 
