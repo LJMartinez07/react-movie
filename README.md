@@ -4,7 +4,7 @@ This repository contains a web application made with React and TypeScript. It al
 # Features
    - [x] List popular movies
    - [ ] List popular tv shows
-   - [ ] Search movies by title
+   - [ ] Search movies and tv shows by title
    - [x] Auto-suggest movie title for search function
    - [ ] View detail movie info including poster, casts, trailers
 
