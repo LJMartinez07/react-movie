@@ -1,6 +1,6 @@
 import React from 'react';
 import Main from '../../layouts/main';
-import { MovieListComponent } from '../../components/movie/movie-list'
+import { TvListComponent } from '../../components/tv/tv-list'
 export default () => {
     const TV_LIST_TYPE = {
         POPULAR: 'popular',
@@ -10,6 +10,7 @@ export default () => {
     return (
         <Main>
             <h1>Tv Show</h1>
+            <TvListComponent type={TV_LIST_TYPE.POPULAR} />
         </Main>
     );
 };

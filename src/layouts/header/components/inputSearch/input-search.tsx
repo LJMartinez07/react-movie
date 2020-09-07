@@ -1,9 +1,7 @@
-import React, { FC, useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import React, { FC, useState } from 'react';
 import styles from './input-search.module.scss';
 import MovieService from '../../../../http/service/MovieService';
 import { KeyWordsComponent } from '../keyWords/key-word';
-import { get } from 'http';
 
 interface result {
     id: number;
@@ -46,7 +44,7 @@ export const InputSearchComponent: FC = () => {
                 placeholder="Search your favorite Movie/Tv Show"
                 type="search"
             />
-            {open == true && <KeyWordsComponent suggestions={suggestions} />}
+            {open === true && <KeyWordsComponent suggestions={suggestions} />}
         </div>
     );
 };
