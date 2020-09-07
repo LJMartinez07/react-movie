@@ -12,5 +12,9 @@
 
     .list_item {
         padding: 10px;
+
+        &:hover{
+            background: #f0f0f0
+        }
     }
 }
