@@ -22,11 +22,11 @@ export const MovieListComponent: React.FC<MovieProps> = (props) => {
         overflow: 'auto',
         // flexWrap: "wrap",
     } as React.CSSProperties;
-    return (
-        <div style={wrapper_list}>
-            {movies.map((movie, index) => (
-                <MovieCard movie={movie} />
-            ))}
+
+    const MoviesList = movies.map((movie, index) => (
+        <div key={index}>
+            <MovieCard movie={movie} />
         </div>
-    );
+    ));
+    return <div style={wrapper_list}>{MoviesList}</div>;
 };
