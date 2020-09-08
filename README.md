@@ -3,7 +3,7 @@ This repository contains a web application made with React and TypeScript. It al
 #### [See it Live](https://LJMartinez07.github.io/react-movie/)
 # Features
    - [x] List popular movies
-   - [ ] List popular tv shows
+   - [x] List popular tv shows
    - [ ] Search movies and tv shows by title
    - [x] Auto-suggest movie title for search function
    - [ ] View detail movie info including poster, casts, trailers
