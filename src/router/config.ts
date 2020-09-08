@@ -20,7 +20,7 @@ export default [
         component: Movie,
     },
     {
-        path: '/tv',
+        path: '/tv/:id',
         component: Tv,
     },
     {

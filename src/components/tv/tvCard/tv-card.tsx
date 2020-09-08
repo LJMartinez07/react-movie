@@ -10,7 +10,7 @@ export const TvCard: React.FC<Props> = (props) => {
     const { tvshow } = props;
     let history = useHistory();
     const handleClick = () => {
-        history.push('tv');
+        history.push({ pathname: '/tv', state: { id: tvshow.id } });
     };
     return (
         <Card
