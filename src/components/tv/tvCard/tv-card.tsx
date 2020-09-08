@@ -1,12 +1,12 @@
 import React from 'react';
 import { Card, Elevation } from '@blueprintjs/core';
-// import { ImageSizes } from '../../../http/service/tmovieOptions'
+import { ImageSizes } from '../../../http/service/tmovieOptions';
 import styles from './tv-card.module.scss';
 interface Props {
-    tvShow: iTvShow;
+    tvshow: iTvShow;
 }
-export const tvCard: React.FC<Props> = (props) => {
-    const { tvShow } = props;
+export const TvCard: React.FC<Props> = (props) => {
+    const { tvshow } = props;
     return (
         <Card
             style={{
@@ -16,10 +16,14 @@ export const tvCard: React.FC<Props> = (props) => {
         >
             <div className={styles.card_body}>
                 <div>
-                    {/* <img className={styles.image} src={`https://image.tmdb.org/t/p/${ImageSizes.SMALL}${tvShow.poster_path}`} alt="" /> */}
+                    <img
+                        className={styles.image}
+                        src={`https://image.tmdb.org/t/p/${ImageSizes.SMALL}${tvshow.poster_path}`}
+                        alt=""
+                    />
                 </div>
                 <div className={styles.title}>
-                    <h3>{tvShow.name}</h3>
+                    <h3>{tvshow.name}</h3>
                 </div>
             </div>
         </Card>

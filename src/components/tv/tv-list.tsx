@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import { ResourceEndpoint } from '../../http/service/tmovieOptions';
 import MovieService from '../../http/service/MovieService';
-import { tvCard } from './tvCard/tv-card'
+import { TvCard } from '../tv/tvCard/tv-card';
 const service = new MovieService();
 interface TvProps {
     type: string;
@@ -22,16 +22,11 @@ export const TvListComponent: React.FC<TvProps> = (props) => {
         // flexWrap: "wrap",
     } as React.CSSProperties;
 
-
-    const tvShowsList = tvShows.map((tvShow, index) =>
-        <div key={index} >
-            <tvCard tvShow={tvShow} />
+    const tvShowsList = tvShows.map((tvShow, index) => (
+        <div key={index}>
+            <TvCard tvshow={tvShow} />
         </div>
-    );
+    ));
 
-    return (
-        <div style={wrapper_list}>
-            {tvShowsList}
-        </div>
-    );
-}
+    return <div style={wrapper_list}>{tvShowsList}</div>;
+};
