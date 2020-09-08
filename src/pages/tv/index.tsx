@@ -9,8 +9,10 @@ export default () => {
     };
     return (
         <Main>
-            <h1>Tv Show</h1>
+            <h1>Popular Tv Shows</h1>
             <TvListComponent type={TV_LIST_TYPE.POPULAR} />
+            <h1>On the air Tv Shows</h1>
+            <TvListComponent type={TV_LIST_TYPE.ON_THE_AIR} />
         </Main>
     );
 };
