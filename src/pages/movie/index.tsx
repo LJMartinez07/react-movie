@@ -4,7 +4,7 @@ import Main from '../../layouts/main';
 export default () => {
     return (
         <Main>
-            <h1>tv detail</h1>
+            <h1>movie detail</h1>
         </Main>
     );
 };
