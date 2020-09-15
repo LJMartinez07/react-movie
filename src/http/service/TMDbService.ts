@@ -14,9 +14,9 @@ export default class MovieService {
             console.log(e);
         }
     }
-    async getKeywords(query: string) {
+    async search(type: string, query: string) {
         try {
-            const keyword = await http.get('/search/keyword', {
+            const keyword = await http.get(`/search/${type}`, {
                 params: {
                     query,
                 },

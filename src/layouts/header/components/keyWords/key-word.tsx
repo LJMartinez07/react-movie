@@ -9,11 +9,14 @@ interface KeyWordsProps {
     suggestions: suggestion[];
 }
 export const KeyWordsComponent: FC<KeyWordsProps> = (props) => {
+    function clickItem() {
+        console.log('clicked');
+    }
     return (
         <div className={styles.key_word}>
             <ul className={styles.list_suggestions}>
                 {props.suggestions.map((suggestion) => (
-                    <li key={suggestion.name} className={styles.list_item}>
+                    <li key={suggestion.name} onClick={clickItem} className={styles.list_item}>
                         {suggestion.name}
                     </li>
                 ))}
