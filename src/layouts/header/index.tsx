@@ -11,7 +11,7 @@ const Header: FC = () => {
         <Navbar className="bp3-violet1">
             <Navbar.Group align={Alignment.LEFT}>
                 <Navbar.Heading>
-                    <Link to="/">React Movies</Link>
+                    <Link to="/react-movie/home">React Movies</Link>
                 </Navbar.Heading>
                 {!isTabletOrMobile && <InputSearchComponent />}
                 <Navbar.Divider className="customize-bar-divider" />
