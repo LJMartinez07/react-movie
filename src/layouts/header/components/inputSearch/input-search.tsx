@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import styles from './input-search.module.scss';
-import MovieService from '../../../../http/service/MovieService';
+import MovieService from '../../../../http/service/TMDbService';
 import { KeyWordsComponent } from '../keyWords/key-word';
 
 interface result {

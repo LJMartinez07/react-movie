@@ -1,5 +1,5 @@
 import http from '../http-client';
-import { AxiosResponse } from 'axios';
+// import { AxiosResponse } from 'axios';
 
 export default class MovieService {
     async getList(resource: string, type: string, page: number = 1) {

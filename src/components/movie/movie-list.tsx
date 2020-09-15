@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MovieCard } from '../movie/movieCard/movie-card';
-import MovieService from '../../http/service/MovieService';
+import MovieService from '../../http/service/TMDbService';
 import { ResourceEndpoint } from '../../http/service/tmovieOptions';
 interface MovieProps {
     type: string;

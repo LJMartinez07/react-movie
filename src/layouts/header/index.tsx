@@ -15,12 +15,12 @@ const Header: FC = () => {
                 </Navbar.Heading>
                 {!isTabletOrMobile && <InputSearchComponent />}
                 <Navbar.Divider className="customize-bar-divider" />
-                <Link to="/movies">
+                <Link to="/react-movie/movies">
                     <Button className="bp3-minimal" icon="film">
                         Movies
                     </Button>
                 </Link>
-                <Link to="/tvshows">
+                <Link to="/react-movie/tvshows">
                     <Button className="bp3-minimal" icon="video">
                         TV Shows
                     </Button>

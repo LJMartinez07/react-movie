@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ResourceEndpoint } from '../../http/service/tmovieOptions';
-import MovieService from '../../http/service/MovieService';
+import MovieService from '../../http/service/TMDbService';
 import { TvCard } from '../tv/tvCard/tv-card';
 const service = new MovieService();
 interface TvProps {
