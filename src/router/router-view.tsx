@@ -5,7 +5,8 @@ function CustomRoute(props: iRouterViewProps) {
     let path: string = props.location.pathname;
     props.beforeEnter && props.beforeEnter(path);
     // '/'-> '/home
-    if (path === '/' || path === '/react-movie') return <Redirect to="/react-movie/home" />;
+    console.log(path);
+    if (path === '/' || path === '/react-movie/') return <Redirect to="/react-movie/home" />;
     // if can match
     let matchRoute: any = routerMap.find((item) => {
         let url = item.path;
