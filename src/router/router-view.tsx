@@ -16,7 +16,7 @@ function CustomRoute(props: iRouterViewProps) {
     if (matchRoute) {
         return <Route exact={!matchRoute.hasChild} path={matchRoute.path} component={matchRoute.component} />;
     }
-    return <Redirect to="/404" />;
+    return <Redirect to="/react-movie/404" />;
 }
 
 export const RouterView: React.FC<iRouterViewProps> = (props) => {
