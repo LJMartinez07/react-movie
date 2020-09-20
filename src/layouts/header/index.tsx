@@ -11,16 +11,16 @@ const Header: FC = () => {
         <Navbar className="bp3-violet1">
             <Navbar.Group align={Alignment.LEFT}>
                 <Navbar.Heading>
-                    <Link to="/react-movie/home">React Movies</Link>
+                    <Link to="/home">React Movies</Link>
                 </Navbar.Heading>
                 {!isTabletOrMobile && <InputSearchComponent />}
                 <Navbar.Divider className="customize-bar-divider" />
-                <Link to="/react-movie/movies">
+                <Link to="/movies">
                     <Button className="bp3-minimal" icon="film">
                         Movies
                     </Button>
                 </Link>
-                <Link to="/react-movie/tvshows">
+                <Link to="/tvshows">
                     <Button className="bp3-minimal" icon="video">
                         TV Shows
                     </Button>

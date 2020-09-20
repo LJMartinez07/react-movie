@@ -7,28 +7,28 @@ import Tv from '../pages/tv';
 import NotFound from '../pages/error';
 export default [
     {
-        path: '/react-movie/home',
+        path: '/',
         component: Home,
     },
 
     {
-        path: '/react-movie/movies',
+        path: '/movies',
         component: Movies,
     },
     {
-        path: '/react-movie/movie',
+        path: '/movie/:id',
         component: Movie,
     },
     {
-        path: '/react-movie/tv',
+        path: '/tv/:id',
         component: Tv,
     },
     {
-        path: '/react-movie/tvshows',
+        path: '/tvshows',
         component: TvShows,
     },
     {
-        path: '/react-movie/404',
+        path: '/404',
         component: NotFound,
     },
 ];
