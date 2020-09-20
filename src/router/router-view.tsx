@@ -19,7 +19,7 @@ function CustomRoute(props: iRouterViewProps) {
 
 export default function (props: iRouterViewProps) {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={`${process.env.PUBLIC_URL}/`}>
             <>
                 <Switch>
                     <CustomRoute {...props} />
