@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react';
 import styles from './input-search.module.scss';
 import MovieService from '../../../../http/service/TMDbService';
 import { KeyWordsComponent } from '../keyWords/key-word';
+import _ from "lodash";
 
 interface result {
     id: number;
@@ -19,10 +20,15 @@ export const InputSearchComponent: FC = () => {
     const [suggestions, setSuggestions] = useState([]);
     function handleClick(event: any) {
         setQuery(event.target.value);
-        if (event.target.value)
-            service.search('keyword', event.target.value).then((res) => {
-                setSuggestions(res.results);
-            });
+        _.debounce((event: any) => {
+            console.log(event)
+            if (event.target.value)
+                service.search('keyword', event.target.value).then((res) => {
+                    setSuggestions(res.results);
+                });
+        }, 300)
+
+
     }
 
     function show() {
