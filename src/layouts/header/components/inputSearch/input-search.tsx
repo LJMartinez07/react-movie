@@ -31,16 +31,15 @@ export const InputSearchComponent: FC = () => {
 
     return (
         <div className={styles.input_search}>
-
             <input
                 className="bp3-input"
                 value={query}
                 onChange={handleClick}
-                onBlur={show}
                 placeholder="Search your favorite Movie/Tv Show"
                 type="search"
             />
-            <KeyWordsComponent suggestions={suggestions} />
+
+            {  query && <KeyWordsComponent suggestions={suggestions} />}
         </div>
     );
 };
