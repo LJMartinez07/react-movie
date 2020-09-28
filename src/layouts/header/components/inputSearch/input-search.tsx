@@ -25,16 +25,22 @@ export const InputSearchComponent: FC = () => {
             });
     }
 
+    function show() {
+        setShowSuggestions(true)
+    }
+
     return (
         <div className={styles.input_search}>
+
             <input
                 className="bp3-input"
                 value={query}
                 onChange={handleClick}
+                onBlur={show}
                 placeholder="Search your favorite Movie/Tv Show"
                 type="search"
             />
-            {showSuggestions && query && <KeyWordsComponent suggestions={suggestions} />}
+            <KeyWordsComponent suggestions={suggestions} />
         </div>
     );
 };
